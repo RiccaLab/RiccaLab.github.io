@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caramel&display=swap');
+p.title{
+  color: #fff;
+  font-size: 22px;
+  font-weight: bold;
+  margin: auto 15%;
+  padding-top: 20px;
+}
+
+body {
+  background-color: #32383b;
+  height: 100%;
+}
+
+.rule {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.rule p {
+  padding: 15px;
+  margin: 30px 15%;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.atten {
+  font-size: 20px;
+  text-align: center;
+  color: #fff;
+}
+
+
+
+
+.plate {
+    margin-top: 30px;
+    border-radius: 10px;
+    border: 4px solid rgba(225, 225, 225, 0);
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    pointer-events: auto;
+}
+
+.plate2 {
+    margin-top: 30px;
+    border-radius: 10px;
+    border: 4px solid rgba(225, 225, 225, 0);
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    pointer-events: auto;
+}
+
+/*ネイビー*/
+#navy {
+    background: #2c4d69;
+    box-shadow: inset 0 0 0 2px #fff, 0px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+#navy2 {
+    margin-top: -25px;
+    width: 200px;
+    text-align: center;
+    height: 50px;
+    background: #f069ac;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: inset 0 0 0 2px #fff, 0px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.plate span {
+    padding: 20px;
+    display: block;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.plate2 span {
+    padding: 20px;
+    display: block;
+    text-align: center;
+    font-size: 2rem;
+}
+
+/*ネイビー*/
+#navy2,
+#navy span {
+    font-family: 'Fredoka One', cursive;
+    color: #fff;
+}
+
+
+
+.plate:before,
+.plate:after {
+    content: "";
+    width: 4px;
+    height: 50px;
+    position: absolute;
+    top: -35px;
+    box-shadow: inset 0px -1px 1px rgba(0, 0, 0, 0.5), 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+
+.plate:before {
+    left: 13px;
+}
+
+.plate:after {
+    right: 13px;
+}
+
+/*ネイビー*/
+#navy2:before,
+#navy2:after,
+#navy:before,
+#navy:after {
+    background: #fcfcfa;
+}
+
+
+.plate span:before,
+.plate span:after {
+    content: "";
+    border-radius: 50%;
+    position: absolute;
+    top: 10px;
+    box-shadow: inset 0px -1px 2px rgba(0, 0, 0, 0.5), inset 0px 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+
+/**ネイビー**/
+#navy span:before,
+#navy span:after {
+    width: 10px;
+    height: 10px;
+    background: #fcfcfa;
+}
+
+#navy2 span:before,
+#navy2 span:after {
+    width: 10px;
+    height: 10px;
+    background: #fcfcfa;
+}
+
+#navy span:before {
+    left: 10px;
+}
+
+#navy span:after {
+    right: 10px;
+}
+
+
+
+/**   original  */
+
+.custom-btn {
+    background: #2c4d69;
+}
+
+.bg-navy {
+    background: #2c4d69;
+}
+
+.bg-cream {
+    background: rgb(149, 136, 94);
+}
+
+.bg-img {
+    overflow: hidden;
+}
+
+.contents {
+    position: absolute;
+    z-index: 1000;
+    width: 100%;
+    pointer-events: none;
+}
+
+.content {
+    max-width: 400px;
+    margin: 0 auto;
+    margin-top: 100px;
+    margin-bottom: -50px;
+    text-align: center;
+    pointer-events: auto;
+    box-shadow: inset 0px -1px 1px rgba(0, 0, 0, 0.5), 0 0 5px rgba(0, 0, 0, 0.5);
+    color: #fcfcfa;
+    padding-bottom: 10px;
+    /*height: 140px;*/
+}
+
+.content-title {
+    color: #fcfcfa;
+    font-size: 2.6rem;
+    border-bottom: 2px solid #fcfcfa;
+    width: 80%;
+    margin: 0 auto;
+    font-weight: 700;
+    font-family: "Caramel";
+}
+
+@media all and (min-width: 1025px) {
+    #items {
+        min-height: 940px !important;
+    }
+
+    .plate {
+        width: 550px;
+    }
+
+    .contents {
+        height: 940px;
+    }
+}
+
+@media all and (min-width: 768px) and (max-width: 1024px) {
+    #items {
+        height: 940px !important;
+    }
+
+    .plate {
+        width: 550px;
+    }
+
+    .contents {
+        height: 940px;
+    }
+}
+
+@media all and (min-width: 480px) and (max-width: 768px) {
+    #items {
+        height: 920px !important;
+    }
+
+    .plate {
+        width: 320px;
+    }
+
+    .contents {
+        height: 920px;
+    }
+}
+
+@media all and (max-width: 480px) {
+    #items {
+        height: 690px !important;
+    }
+
+    .contents {
+        height: 690px;
+    }
+}
+
+@media all and (max-width: 375px) {
+    #items {
+        height: 640px !important;
+    }
+
+    .contents {
+        height: 640px;
+    }
+}
