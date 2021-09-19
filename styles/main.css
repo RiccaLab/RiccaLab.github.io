@@ -5,6 +5,14 @@ a:link, a:visited, a:hover, a:active {
   color: #fff;
 }
 
+a:hover:before {
+    content: ">";
+}
+
+a:hover:after {
+    content: "<";
+}
+
 li {
     list-style: none;
 }
@@ -69,6 +77,12 @@ body {
 	0% {
         transform: translateY(-200px);
 	}
+    20% {
+        transform: translateY(-80px);
+    }
+    30% {
+        transform: translateY(-100px);
+    }
 	100% {
         transform: translateY(0px);
 	}
