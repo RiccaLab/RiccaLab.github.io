@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Caramel&display=swap');
+
+a {
+  color: #fff;
+  text-decoration: underline;
+}
+
 p.title{
   color: #fff;
   font-size: 22px;
@@ -182,6 +188,10 @@ body {
     pointer-events: none;
 }
 
+.content-wrap {
+    border: 2px solid rgba(225, 225, 225);
+}
+
 .content {
     max-width: 400px;
     margin: 0 auto;
@@ -191,7 +201,7 @@ body {
     pointer-events: auto;
     box-shadow: inset 0px -1px 1px rgba(0, 0, 0, 0.5), 0 0 5px rgba(0, 0, 0, 0.5);
     color: #fcfcfa;
-    padding-bottom: 10px;
+    padding: 5px;
     /*height: 140px;*/
 }
 
