@@ -77,6 +77,10 @@ body {
     animation: come-down-anim 0.8s ease-in;
 }
 
+.plate2:hover {
+    text-decoration: underline;
+}
+
 @keyframes come-down-anim {
 	0% {
         transform: translateY(-200px);
@@ -129,7 +133,6 @@ body {
     font-family: 'Fredoka One', cursive;
     color: #fff;
 }
-
 
 
 .plate:before,
