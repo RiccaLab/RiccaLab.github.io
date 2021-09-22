@@ -16,13 +16,31 @@
 
 <body>
     <div class="wrap">
+        <nav id="global-nav">
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">PRODUCT</a></li>
+                <li><a href="#">WORKS</a></li>
+                <li><a href="#">COMPANY</a></li>
+                <li><a href="#">CONTACT</a></li>
+            </ul>
+        </nav>
         <div uk-grid>
             <div class="uk-width-1-1">
                 <div uk-slideshow="animation: fade;autoplay: true;pause-on-hover: false;">
                     <div class="contents">
                         <div class="plate" id="navy">
                             <span>Let's Ricca!!</span>
-                            <div class="himo"></div>
+                            <div class="himo">
+                                <div id="nav-toggle">
+                                    <div>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                </div>
+                                <div id="nav-bg"></div>
+                            </div>
                         </div>
                         <div class="plate2" id="navy2">
                             <span style="padding-top: 0px;">Join</span>
@@ -33,7 +51,8 @@
                                     Community
                                 </div>
                                 <div style="margin-top: 10px;margin-bottom: 6px;">
-                                    <button class="uk-button custom-btn" onclick="location.href='https://discord.gg/gNam5a8Q84'">
+                                    <button class="uk-button custom-btn"
+                                        onclick="location.href='https://discord.gg/gNam5a8Q84'">
                                         <img width="20px" height="20px" src="images/Discord-Logo-White.png">
                                         Discord
                                     </button>
@@ -77,6 +96,9 @@
         $("#navy2").click((e) => {
             location.href = "minecraft://?addExternalServer=RICCA!|ricca.cf:50137"
         })
+        $('#nav-toggle').click(function () {
+            $('body').toggleClass('open');
+        });
     </script>
 </body>
 

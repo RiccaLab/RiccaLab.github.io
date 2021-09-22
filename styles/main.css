@@ -1,6 +1,170 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Caramel&display=swap');
 
+
+.open #global-nav {
+  z-index: 1002;
+  visibility: visible;
+}
+#global-nav {
+  visibility: hidden;
+  position: fixed;
+  display: table;
+  vertical-align: middle;
+  color: #fff;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+}
+#global-nav ul {
+  display: table-cell;
+  vertical-align: middle;
+  list-style: none;
+}
+#global-nav a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  padding: 10px 0;
+}
+
+/* ***********************************************************
+* nav-list
+* *********************************************************** */
+#global-nav ul li {
+  opacity: 0;
+  -webkit-transform: scaleX(0) translateX(-260px);
+  transform: scaleX(0) translateX(-260px);
+  -webkit-transition: none;
+  transition: none;
+}
+.open #global-nav ul li {
+  opacity: 1;
+  -webkit-transform: scaleX(1) translateX(0);
+  transform: scaleX(1) translateX(0);
+
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+
+  -webkit-transition-delay: .1s;
+  transition-delay: .1s;
+}
+.open #global-nav ul li:nth-child(2) {
+  -webkit-transition-delay: .2s;
+  transition-delay: .2s;
+}
+.open #global-nav ul li:nth-child(3) {
+  -webkit-transition-delay: .3s;
+  transition-delay: .3s;
+}
+.open #global-nav ul li:nth-child(4) {
+  -webkit-transition-delay: .4s;
+  transition-delay: .4s;
+}
+.open #global-nav ul li:nth-child(5) {
+  -webkit-transition-delay: .5s;
+  transition-delay: .5s;
+}
+
+#nav-bg {
+  content: "";
+  width: 4000px;
+  height: 4000px;
+  margin-right: -2015px;
+  margin-top: -1960px;
+  top: 20px;
+  right: 20px;
+  display: block;
+  position: absolute;
+  background: #17A669;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: scale(.01);
+  transform: scale(.01);
+  z-index: 1001;
+}
+.open #nav-bg {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: all .6s ease-out;
+  transition: all .6s ease-out;
+  pointer-events: none;
+}
+
+#nav-toggle {
+  display: block;
+  position: absolute;
+  right: 10px;
+  top: 21px;
+  width: 10px;
+  height: 10px;
+  cursor: pointer;
+  padding: 10px 11px;
+  z-index: 1003;
+  -webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+
+#nav-toggle div {
+  position: relative;
+}
+#nav-toggle span {
+  display: block;
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background: transparent;
+  left: 0;
+  zoom: 1;
+  -webkit-transition: .35s ease-in-out;
+  transition: .35s ease-in-out;
+}
+
+#nav-toggle span:nth-child(1) {
+  top: 0;
+}
+#nav-toggle span:nth-child(2) {
+  top: 8px;
+}
+#nav-toggle span:nth-child(3) {
+  top: 16px;
+}
+.open #nav-toggle {
+  background: transparent;
+}
+.open #nav-toggle span {
+  background: #fff;
+}
+
+.open #nav-toggle span:nth-child(1) {
+  top: 9px;
+  -webkit-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+  zoom: 1;
+}
+.open #nav-toggle span:nth-child(2) {
+  width: 0;
+  left: 50%;
+}
+.open #nav-toggle span:nth-child(3) {
+  top: 9px;
+  -webkit-transform: rotate(135deg);
+  transform: rotate(135deg);
+  zoom: 1;
+}
+
+
+/**** ~~~~~ 　ここまでメニュー */
+
+
+
+
+
 a:link, a:visited, a:hover, a:active {
   color: #fff;
 }
@@ -54,27 +218,30 @@ body {
 
 
 .himo {
-    width: 2px;
-    height: 80px;
+    width: 5px;
+    height: 50px;
     background-color: rgb(199, 183, 183);
     right: 40px;
     position: absolute;
     box-shadow: inset 0px -1px 1px rgba(0, 0, 0, 0.5), 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
-.himo:after {
+/* タマ */
+
+/*.himo:after {
     content: "";
-    width: 20px;
-    height: 20px;
+    width: 35px;
+    height: 35px;
     border-radius: 50%;
-    background: rgb(219, 140, 137);
+    background: rgb(106, 206, 106);
     box-shadow: inset 0px -1px 2px rgba(0, 0, 0, 0.5), inset 0px 1px 1px rgba(0, 0, 0, 0.2);
     position: absolute;
-    top: 70px;
-    left: -9px;
+    top: 45px;
+    left: -15px;
     pointer-events: auto;
     cursor: pointer;
-}
+}*/
+
 
 
 .plate {
